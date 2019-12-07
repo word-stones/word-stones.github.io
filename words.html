@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+
+    <style>
+        *,
+        *::after,
+        *::before {
+            margin: 0;
+            padding: 0;
+            box-sizing: inherit;
+        }
+
+        html {
+            font-family: 'Lato', sans-serif;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-size: 10px;
+            position: absolute;
+        }
+
+        #root {
+            background-image: linear-gradient(to right bottom,
+                    rgba(89, 145, 209, 0.404),
+                    rgba(59, 221, 53, 0.7)),
+                url('https://images.unsplash.com/photo-1523895665936-7bfe172b757d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80');
+        }
+
+        .boxspace {
+            height: 1.8rem;
+        }
+
+        .wordbox {
+            display: block;
+            border-width: 1px;
+            border-color: black;
+            padding: 2rem 2rem;
+            margin: 0 2rem;
+            font-size: 1.6rem;
+            text-align: center;
+            box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, .3);
+            border-radius: 0.2rem;
+            background-color: rgba(255, 255, 255, 0.685);
+            font-weight: 400;
+        }
+
+        .wordbox:hover {
+            transition: all .2s ease-out;
+            transform: translateY(-5px) scale(1.015);
+            font-size: 1.61rem;
+            box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, .4);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="root"></div>
+
+    <script>
+        window.onload = function () {
+            var list = [
+                "Hasende anlaşmak mümkünse, ahsende münakaşaya girmemeli.Hasen bazen ahsenden daha ahsendir.",
+                "Geçmişten koparıldığınızda geleceğinizde sürçmeler başlar.",
+                "Nasıl yaşarsanız öyle ölürsünüz, nasıl ölürseniz öyle haşrolursunuz.",
+                "Çoğu şey gençlikte yapılır.",
+                "Mü'min sarsılsa bile devrilmez.",
+                "Yapacağı işi menfaate bağlı yapan insanlar sonunda hüsranla karşılaşır.",
+                "Adem - i hayvani yolunda giden insanlar düşe kalkadırlar.",
+                "Allah bizi abes yere yaratmadı, abes yere yaşatmıyor, abes yere de öldürmeyecek.",
+                "O cenneti görmekle şereflendi mi, yoksa cennet O'nu görmekle mi şereflendi?",
+                "İnsan her zaman arar bir zatı - sadık, bazen de O, çıkar zatı münafık.",
+                "Bir şeyin gerçeğine ulaşmak ameli ile olur.",
+                "Amelinizde rıza - i ilahi olmalı, o razı olsa bütün dünya küsse ehemmiyeti yok.",
+                "Müslümanlık adına destanların kesildiği fakat canına okunduğu bir dönem...",
+                "Nefsini sindirememiş insanda fütüvvet aramamalı...",
+                "Alemi nasıl bilirsin, kendin gibi.",
+                "Birden ortaya çıkan ve zahmetsizce gelenler, aniden kaybolur ve sessizce giderler.",
+                "Bazı kimseler ezbere konuştukları kadar ezber çalışsalardı Kur’an hafızı olurlardı.",
+                "İnsan, düşünce dünyasına göre şekillenen bir varlıktır.O, nasıl düşünüyorsa, istidadı ölçüsünde, öyle olmaya namzettir.",
+                "Çile, yüce hedeflere varmanın ve yüksek neticeler elde etmenin tek yoludur.",
+                "İnsan herhangi bir ideale, inandığı ölçüde gönül verir ve alâkadar olur.",
+                "Sabır insanın iman seviyesini gösterir.",
+                "Bazı kimseler ezbere konuştukları kadar ezber çalışsalardı Kur’an hafızı olurlardı.",
+                "Âlem seni her şey gördükçe sen kendini lâ-şey(hiç) bilmelisin.",
+                "Güneş varken hangi yıldızın ışığı görünür ki ? !",
+                "Kalb ve akıl süzgecinden geçirilmeden zihne doldurulan bilgiler insanın gönlünde hayret, haşyet ve muhabbet hasıl etmez; dolayısıyla da, Allah’a bir adım daha yaklaştırmayan, aksine O’ndan uzaklaştıran bu bilgi kırıntıları - ne kadar parlak görünürse görünsün - sadece lüks ve fanteziden ibarettir.",
+                "Nasıl yaşarsan öyle ölürsün, nasıl ölürsen öyle haşrolursun.",
+                "Çoğu şey gençlikte yapılır.",
+                "Adem - i hayvani yolunda giden insanlar düşe kalkadır.",
+                "Allah bizi abes yere yaratmadı, abes yere yaşatmıyor, abes yere de öldürmeyecek."
+            ]
+            var root = document.getElementById("root")
+            var wordList = list.map(function (o, n, a) {
+                res = `<p class='wordbox'><i>"${o}"</i></p>`;
+                return res;
+            })
+            var injectHTML = "<div class='boxspace'></div>";
+            for (var i = 0; i < wordList.length; i++) {
+                injectHTML = injectHTML + wordList[i] + "<div class='boxspace'></div>";
+            }
+            root.innerHTML = injectHTML;
+        }
+    </script>
+</body>
+
+</html>
