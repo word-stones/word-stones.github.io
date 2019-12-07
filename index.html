@@ -35,7 +35,7 @@
         }
 
         .boxspace {
-            height: 1.8rem;
+            height: 2rem;
         }
 
         .wordbox {
@@ -43,7 +43,7 @@
             border-width: 1px;
             border-color: black;
             padding: 2rem 2rem;
-            margin: 0 2rem;
+            margin: 0 15rem;
             font-size: 1.6rem;
             text-align: center;
             box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, .3);
@@ -57,6 +57,27 @@
             transform: translateY(-5px) scale(1.015);
             font-size: 1.61rem;
             box-shadow: 0px 15px 15px 10px rgba(0, 0, 0, .4);
+        }
+        @media only screen and (max-width: 1000px) {
+            .boxspace {
+                height: 1.6rem;
+            }
+            .wordbox {
+                display: block;
+                border-width: 1px;
+                border-color: black;
+                padding: 2rem 2rem;
+                margin: 0 2rem;
+                font-size: 1.2rem;
+                text-align: center;
+                box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, .3);
+                border-radius: 0.2rem;
+                background-color: rgba(255, 255, 255, 0.685);
+                font-weight: 400;
+            }
+            .wordbox:hover{
+                font-size: 1.22rem;
+            }
         }
     </style>
 
